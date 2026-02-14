@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chat-frontend-azb2cn116-xinn1123s-projects.vercel.app/",
+    origin: "https://chat-frontend-puce.vercel.app",
     credentials: true,
   })
 );
