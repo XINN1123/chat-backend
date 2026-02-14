@@ -8,13 +8,11 @@ export const generateToken = (userId, res) => {
   );
 
   res.cookie("jwt", token, {
-    maxAge: 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     httpOnly: true,
-    secure: true,
-    sameSite: "none",
-  
+    secure: true,           // REQUIRED for cross-site cookies (Vercel ↔ Render)
+    sameSite: "none",       // REQUIRED for cross-site cookies
   });
 
   return token;
 };
-
